@@ -18,22 +18,45 @@ Use this script responsibly and in accordance with TikTok's terms of service. Un
 
 ## Setup Instructions
 
+### Prerequisites
+- **Python 3.x**: Ensure Python is installed on your system. You can download it from [python.org](https://www.python.org/downloads/).
+- **Git**: Ensure Git is installed to clone the repository. You can download it from [git-scm.com](https://git-scm.com/).
+
 ### Step 1: Clone the Repository
-Clone this repository to your local machine using:
+Open your terminal (Command Prompt on Windows, Terminal on macOS) and run:
+
 ```bash
 git clone https://github.com/Estebanech1620/TikTok-Mass-Unfollow.git
 cd TikTok-Mass-Unfollow
 ```
 
 ### Step 2: Set Up a Virtual Environment
-Create and activate a virtual environment to manage dependencies:
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
+
+#### On Windows
+1. Open Command Prompt and navigate to the project directory.
+2. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   ```
+3. Activate the virtual environment:
+   ```bash
+   venv\Scripts\activate
+   ```
+
+#### On macOS
+1. Open Terminal and navigate to the project directory.
+2. Create a virtual environment:
+   ```bash
+   python3 -m venv venv
+   ```
+3. Activate the virtual environment:
+   ```bash
+   source venv/bin/activate
+   ```
 
 ### Step 3: Install Required Packages
 With the virtual environment activated, install the necessary packages:
+
 ```bash
 pip install selenium webdriver-manager
 ```
@@ -54,6 +77,7 @@ pip install selenium webdriver-manager
 
 ### Step 5: Deactivate the Virtual Environment (Optional)
 After you are done using the script, you can deactivate the virtual environment by running:
+
 ```bash
 deactivate
 ```

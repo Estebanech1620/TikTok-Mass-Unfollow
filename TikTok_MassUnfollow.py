@@ -33,6 +33,7 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import random
+import os
 
 # Setup Selenium WebDriver
 chrome_options = Options()
@@ -46,7 +47,9 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 # Ask the user for their TikTok username
 TIKTOK_USERNAME = input("Enter your TikTok username (without @): ").strip()
 
-LOG_FILE = "unfollowed_log.txt"  # Log file to save unfollowed users
+# Determine the path to the user's desktop
+desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+LOG_FILE = os.path.join(desktop_path, "unfollowed_log.txt")  # Log file to save unfollowed users
 MAX_UNFOLLOWS = 200  # Ensure exactly 200 users are unfollowed
 BATCH_SIZE = 7  # Number of users to unfollow before scrolling
 
