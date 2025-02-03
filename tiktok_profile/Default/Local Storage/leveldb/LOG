@@ -1,6 +1,0 @@
-2025/02/03-11:20:35.264 3b03 Reusing MANIFEST /Users/estebanech/Desktop/TikTok_MassUnfollow/tiktok_profile/Default/Local Storage/leveldb/MANIFEST-000001
-2025/02/03-11:20:35.265 3b03 Recovering log #4
-2025/02/03-11:20:35.266 3b03 Reusing old log /Users/estebanech/Desktop/TikTok_MassUnfollow/tiktok_profile/Default/Local Storage/leveldb/000004.log 
-2025/02/03-11:23:29.152 510f Level-0 table #7: started
-2025/02/03-11:23:29.160 510f Level-0 table #7: 122959 bytes OK
-2025/02/03-11:23:29.168 510f Delete type=0 #4
