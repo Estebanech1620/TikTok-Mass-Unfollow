@@ -130,9 +130,12 @@ try:
     driver.get("https://www.tiktok.com/login")
     time.sleep(5)
 
+    # Wait for user to log in
+    input("🔄 Please log in to your TikTok account and then press Enter to continue...")
+
     # Navigate to profile page
     driver.get(f"https://www.tiktok.com/@{TIKTOK_USERNAME}")
-    print(f"✅ Navigated to @{TIKTOK_USERNAME}'s profile page.")
+    print("✅ Navigated to your profile page.")
     time.sleep(5)
 
     print("🔄 Please manually click on the 'Following' button to open the list.")

@@ -1,100 +1,73 @@
 # TikTok Mass Unfollow Tool
 
 ## Overview
-
-The TikTok Mass Unfollow Tool is designed to automate the process of unfollowing users on TikTok while adhering to TikTok's rate limits. This tool is intended for personal use and should be used responsibly in accordance with TikTok's terms of service.
+This tool automates the process of unfollowing users on TikTok. It is designed to unfollow exactly 200 users per session and logs the unfollowed accounts.
 
 ## Features
+- Unfollows **exactly** 200 users per session.
+- Unfollows **7 users at a time**, then scrolls down to load more.
+- Saves a log of unfollowed users (usernames or profile URLs) in `unfollowed_log.txt`.
 
-- Unfollows up to 200 users per session.
-- Unfollows 7 users at a time, then scrolls to load more.
-- Logs unfollowed users in `unfollowed_log.txt`.
-- Mimics human behavior with randomized delays.
+## TikTok Unfollowing Regulations
+- **Do not unfollow more than 200-300 users per day** to avoid account restrictions.
+- **Unfollow in intervals** of 50-100 users every few hours to stay safe.
+- **Keep delays of 2-5 seconds** between actions to mimic human behavior.
 
-## Installation
+## Disclaimer
+Use this script responsibly and in accordance with TikTok's terms of service. Unauthorized use of automation may lead to account restrictions or bans.
 
-### Prerequisites
+## Setup Instructions
 
-- Python 3.x
-- Google Chrome browser
+### Step 1: Clone the Repository
+Clone this repository to your local machine using:
+```bash
+git clone https://github.com/Estebanech1620/TikTok-Mass-Unfollow.git
+cd TikTok-Mass-Unfollow
+```
 
-### macOS
+### Step 2: Set Up a Virtual Environment
+Create and activate a virtual environment to manage dependencies:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
 
-1. **Install Homebrew** (if not already installed):
-   ```bash
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   ```
+### Step 3: Install Required Packages
+With the virtual environment activated, install the necessary packages:
+```bash
+pip install selenium webdriver-manager
+```
 
-2. **Install Python**:
-   ```bash
-   brew install python
-   ```
-
-3. **Install Google Chrome**:
-   Download and install from [Google Chrome](https://www.google.com/chrome/).
-
-4. **Install pip (Python package manager)**:
-   ```bash
-   python3 -m ensurepip --upgrade
-   ```
-
-5. **Install required Python packages**:
-   ```bash
-   pip3 install selenium webdriver-manager
-   ```
-
-### Windows
-
-1. **Install Python**:
-   Download and install from [Python.org](https://www.python.org/downloads/).
-
-2. **Add Python to PATH**:
-   During installation, ensure you check "Add Python to PATH".
-
-3. **Install Google Chrome**:
-   Download and install from [Google Chrome](https://www.google.com/chrome/).
-
-4. **Install required Python packages**:
-   Open Command Prompt and run:
-   ```bash
-   pip install selenium webdriver-manager
-   ```
-
-## Usage
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/TikTok-Mass-Unfollow.git
-   cd TikTok-Mass-Unfollow
-   ```
-
-2. **Run the script**:
+### Step 4: Run the Script
+1. **Start the Script**: Run the script using:
    ```bash
    python TikTok_MassUnfollow.py
    ```
 
-3. **Follow the on-screen instructions**:
-   - Enter your TikTok username when prompted (without the '@').
-   - The script will open a browser window and navigate to TikTok.
-   - Log in to your TikTok account if not already logged in.
-   - Manually click on the "Following" button to open the list of users you follow.
-   - Press Enter in the terminal after opening the "Following" tab.
+2. **Log In**: The script will open TikTok's login page. Log in manually to your TikTok account.
 
-4. **The script will begin unfollowing users**:
-   - It will unfollow users in batches of 7, scrolling as needed.
-   - The process will stop after unfollowing 200 users or when no more users are available to unfollow.
-   - Unfollowed users are logged in `unfollowed_log.txt`.
+3. **Navigate to Profile**: After logging in, the script will navigate to your profile page.
 
-## Important Notes
+4. **Open Following List**: Manually click on the "Following" button to open the list of users you are following.
 
-- **Use responsibly**: Ensure you do not exceed TikTok's unfollow limits to avoid account restrictions.
-- **Delays**: The script includes randomized delays to mimic human behavior and reduce the risk of detection.
-- **Disclaimer**: Unauthorized use of automation may lead to account restrictions or bans. Use this tool at your own risk.
+5. **Continue the Script**: Once the "Following" list is open, return to the terminal and press Enter to start the unfollowing process.
+
+### Step 5: Deactivate the Virtual Environment (Optional)
+After you are done using the script, you can deactivate the virtual environment by running:
+```bash
+deactivate
+```
+
+## Logging
+The script logs each unfollowed user in `unfollowed_log.txt`. This file is created in the same directory as the script.
+
+## Troubleshooting
+- Ensure that the virtual environment is activated before running the script.
+- If you encounter any issues with Selenium or WebDriver, ensure that all packages are up to date.
+- Adjust the XPath selectors in the script if TikTok changes its HTML structure.
+
+## Contribution
+Feel free to fork this repository and submit pull requests for any improvements or bug fixes.
 
 ## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes. # TikTok-Mass-Unfollow
+This project is licensed under the MIT License. See the LICENSE file for more details.
