@@ -1,5 +1,8 @@
 # TikTok Mass Unfollow Tool
 
+## Developed by DestinyX Studios
+### Written by Estebanech
+
 ## Overview
 This tool automates the process of unfollowing users on TikTok. It is designed to unfollow exactly 200 users per session and logs the unfollowed accounts.
 
@@ -83,7 +86,7 @@ deactivate
 ```
 
 ## Logging
-The script logs each unfollowed user in `unfollowed_log.txt`. This file is created in the same directory as the script.
+The script logs each unfollowed user in `unfollowed_log.txt`. This file is created on the user's desktop.
 
 ## Troubleshooting
 - Ensure that the virtual environment is activated before running the script.
